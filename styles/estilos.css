@@ -1,0 +1,572 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Nunito", sans-serif;
+}
+.owl-carousel {
+    margin-left: auto;  /* Centrar el carrusel */
+    margin-right: auto; /* Centrar el carrusel */
+    max-width: 800px;   /* Establecer el ancho máximo del carrusel */
+    padding: 0 20px;    /* Añadir margen igual a cada lado del carrusel */
+}
+
+
+.owl-carousel .owl-stage {
+    padding-left: 20px; /* Ajustar el margen izquierdo del área del carrusel */
+    padding-right: 20px; /* Ajustar el margen derecho del área del carrusel */
+}
+/* Estilos para que las imágenes y carruseles ocupen el ancho completo */
+.container-full {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.owl-carousel .item img {
+    width: 100%;
+    height: auto;
+}
+
+/* Estilos para hacer los contenedores de las imágenes responsive */
+.container {
+    max-width: 1200px; /* Ajusta este valor según sea necesario */
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Añade estilos adicionales según sea necesario */
+
+
+/*Body*/
+
+body {
+    overflow-y: scroll;
+}
+
+
+body {
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    width: 0; 
+}
+
+
+body::-webkit-scrollbar-track {
+    background-color: transparent; 
+}
+
+/*header*/ 
+
+.header-contacto{
+    background-color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 85px;
+    padding: 5px 10%;  
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0 4px 6px rgb(39, 38, 38);
+}
+
+.header-contacto .logo-contacto{
+    height: 70px;
+    width: 45px;
+    margin-right: auto;
+    cursor: pointer;
+    transition: all 0.3;
+}
+
+
+
+.headermain { 
+    
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 85px;
+    padding: 5px 10%;
+}
+
+.imagenfondo{
+    background-image: url('../Imgs/mdt.jpg');
+    background-size: auto;
+    background-position: center;
+}
+
+.headermain .logo {
+    height: 70px;
+    width: 45px;
+    margin-right: auto;
+    cursor: pointer;
+    transition: all 0.3;
+}
+
+
+
+.header-contacto .nav-list-contacto{
+    list-style: none;
+}
+
+.headermain .nav-list{
+    list-style: none;
+    margin-top: 20px;
+}
+
+.header-contacto .nav-list-contacto li{
+    display: inline-block;
+    padding: 0 20px; 
+}
+
+.headermain .nav-list li{
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.header-contacto .nav-list-contacto a{
+    font-size: 700;
+    color: #d80000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.headermain .nav-list a{
+    font-size: 700;
+    color: red;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+
+.headermain .nav-list li a:hover{
+    color: red;
+}
+
+.header-contacto .logo-contacto a{
+    text-decoration: none;
+}
+
+.header-contacto .btn-contacto{
+    margin-left: 20px;
+    font-weight: 700;
+    color: white;
+    padding: 9px 25px;
+    background-color: #d80000;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    text-decoration: none;
+     
+}
+
+
+
+.headermain .btn {
+    margin-left: 20px;
+    font-weight: 700;
+    color: white;
+    padding: 9px 25px;
+    background-color: red;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+/* CSS para pantallas más grandes */
+.contenedor-logo {
+    display: flex;
+    align-items: center; /* Para alinear verticalmente el contenido */
+    flex: 1; /* Cada sección ocupa un espacio igual */
+}
+
+.contenido-texto {
+    position: absolute;
+    top: 24%;
+    left: 10vw; /* Ajusta el margen izquierdo según sea necesario */
+    text-align: left; /* Alinea el texto a la izquierda */
+    color: red; /* Color del texto */
+    width: 40%; /* Anchura del contenedor de texto */
+    font-size: 3vw; /* Tamaño del texto en relación al ancho del viewport */
+    margin-bottom: 2vw; /* Margen inferior del texto en relación al ancho del viewport */
+}
+
+.logo2 {
+    width: 20vw; /* Ancho del logo */
+    height: auto; /* Altura automática para mantener la proporción */
+    position: absolute; /* Permite usar las propiedades de posicionamiento */
+    top: 20%; /* Puedes ajustar esta propiedad según sea necesario */
+    right: 15%; /* Ajusta el margen derecho para mover el logo hacia la derecha */
+}
+
+.containerfondo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Alineación horizontal en el centro */
+    align-items: flex-start; /* Alineación vertical en la parte superior */
+}
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .containerfondo {
+        flex-direction: column; /* Apilar elementos verticalmente */
+       
+    }
+
+    .contenido-texto {
+        position: static; /* Restaurar la posición predeterminada */
+        width: 100%; /* Ocupa todo el ancho disponible */
+        text-align: center; /* Alinear el texto al centro */
+    }
+
+    .contenedor-logo {
+        order: 2; /* Cambiar el orden de visualización */
+        align-self: center; /* Alinear al centro */
+    }
+}
+
+
+/* CONTACTO */ 
+
+.contactoh1 {
+    text-align: center;
+    margin-top: 90px;
+    color: #d80000;
+    font-size: 40px;
+}
+
+
+.formulario {
+
+    margin: auto;
+    font-family: Arial, sans-serif;
+    text-align: left;
+    padding-top: 50px;
+    padding-left: 190px;
+    font-weight: bold;
+}
+
+.campo {
+    margin-bottom: 20px;
+}
+
+label {
+    color: #d80000;
+    display: block;
+    padding-bottom: 10px;
+    
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 150%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 35px;
+    font-size: 20px;
+    
+}
+
+button {
+    background-color: red;
+    color: white;
+    padding: 15px 50px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 19px;
+    margin-left: 170px;
+    font-size: 18px;
+    
+}
+
+.contenedor-flex {
+    display: flex; 
+    justify-content: space-between; 
+    max-width: 1000px; 
+    margin-left: 10%;
+}
+.infoConta {
+    padding-left: 50%;
+    margin-top: 8%;
+}
+
+.cuadro {
+    background-color: #ffb000;
+    border-radius: 10%;
+    padding: 40px 50px;
+}
+
+.tel img {
+    margin-right: 20px;
+    margin-top: 8px;
+    margin-left: 0px;
+}
+
+.tel {
+    display: flex; 
+    align-items: center; 
+    color: whitesmoke;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    margin-right: 100px;
+}
+
+.correo {
+    display: flex; 
+    align-items: center; 
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 40px;
+}
+
+.correo img{
+    margin-right: 20px;
+    margin-top: 8px; 
+}
+
+.ubi {
+    display: flex; 
+    align-items: center; 
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+.ubi img {
+    margin-right: 20px;
+    margin-top: 8px; 
+}
+
+
+.insta {
+    display: flex; 
+    align-items: center; 
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.insta img {
+    margin-right: 20px;
+    margin-top: 8px; 
+}
+
+.spacer {
+    height: 1000px; 
+}
+/*Slider 1*/
+
+.slider-container {
+    position: relative;
+  }
+
+.slider-box {
+    width: 1280px;
+    height: auto;
+    margin: 50px auto 0;
+    overflow: hidden;
+}
+
+.slider-box ul {
+    display: flex;
+    padding: 0;
+    width: 450%;
+    animation: slide 25s infinite alternate ease-in-out;
+}
+
+.slider-box li {
+    width: 100%;
+    position: relative;
+}
+
+.slider-box img {
+    width: 100%;
+    margin-top: 10%;
+}
+
+/* Slider 2*/
+
+.carouselslide {
+    margin-top: 60px;
+}
+
+.slider2 .textsli2{
+    margin-left: 224px;
+    margin-top: 100px;
+    font-size: 50px;
+}
+
+.slider2 .textsli2 .highlight {
+    color: red;
+}
+
+.contenedorsli2 .textsli2{
+    display: flex; 
+    justify-content: space-between; 
+    max-width: 750px; 
+}
+.contenedorsli2 {
+    display: flex; 
+    justify-content: space-between; 
+    max-width: 1500px; 
+    
+}
+
+.slider2-box {
+    width: 1280px;
+    height: auto;
+    margin: 50px auto 0;
+    overflow: hidden;
+}
+
+.slider2-box ul {
+    display: flex;
+    padding: 0;
+    width: 450%;
+    animation: slide 25s infinite alternate ease-in-out;
+}
+
+.slider2-box li {
+    width: 100%;
+    position: relative;
+}
+
+.slider2-box img {
+    width: 100%;
+    margin-top: 10%;
+}
+/*Nuestros servicios*/
+.container5 {
+    display: flex;
+    flex-direction: row;
+    height: 400px; /* Occupies full screen height */
+    margin-left: 300px;
+
+}
+.element2 {
+    flex: 1; /* Each element takes equal space */
+    /* Additional styling for elements */
+    margin-right: auto;
+}
+#servicios{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: gray;
+}
+.element2, span{
+    color: red;
+    font-weight: bold;
+}
+
+.element1 {
+    flex: 1; /* Each element takes equal space */
+    /* Additional styling for elements */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .container5 {
+        flex-direction: column; /* Change to stack elements vertically */
+        height: auto; /* Allow elements to stack */
+    }
+}
+.nuestrosclientes, h2{
+    color: #d80000;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    text-align: left;
+
+}
+/*footer*/
+
+.footer {
+    margin-top: 100px;
+    background-color: rgb(172, 22, 22);
+    padding: 20px;
+    text-align: left;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.footer p {
+    text-align: left;
+    margin-left: 40px;
+
+    
+}
+
+.footer h2 {
+    text-align: left;
+    margin-left: 40px;
+}
+
+.footer p img{
+   padding-top: 10px 60px;
+    margin-left: 30px
+}
+
+.contactofooter h2 {
+    text-align: right;
+    margin-right: 500px;
+}
+
+.contenedorfooter{
+    display: flex; 
+
+    max-width: 1000px; 
+    margin-left: 40px;
+}
+
+.instafoot{
+    display: flex; 
+    padding-right: 50px;
+}
+
+.instafoot img {
+    margin-left: 30px;
+    margin-right: 20px;
+    margin-top: 5px; 
+}
+@media only screen and (max-width: 768px) {
+    .contenido-texto {
+        width: auto; /* Reducimos el margen derecho del logo */
+    }
+    .contenedor-logo{
+        width: auto;
+    }
+    .btn{
+        color: #ffb000;
+    }
+
+
+}
+@keyframes slide {
+    0% { transform: translateX(0); } 
+    20% { transform: translateX(0); } 
+    55% { transform: translateX(-25%); } 
+    75% { transform: translateX(-50%); } 
+    100% { transform: translateX(-75%); } 
+  }
+  
+
+
